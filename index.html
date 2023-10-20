@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth selection:bg-dark selection:text-light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | MIU</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="icon" href="dist/img/favicon/favicon.png" type="image/x-icon" />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- to top -->
+    <a
+      href="#home"
+      class="fixed bottom-4 right-4 z-[9999] h-14 w-14 items-center justify-center rounded-full bg-darker p-4 animate-bounce flex"
+      id="to-top"
+    >
+      <span class="mt-2 block h-5 w-5 rotate-45 border-t-4 border-l-4"></span>
+    </a>
+    <!-- to top -->
+
+    <!-- header -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a
+              href="#home"
+              class="font-bold text-3xl lg:text-4xl text-primary dark:text-light block py-6"
+              >MIU<span class="text-secondary">.</span></a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span class="hamburger-line origin-top-left transition"></span>
+              <span class="hamburger-line transition"></span>
+              <span class="hamburger-line origin-bottom-left transition"></span>
+            </button>
+            <!-- navigation -->
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-light dark:bg-dark lg:dark:bg-transparent shadow-lg rounded-lg max-w-[250px] right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:pr-0 pr-6"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-dark dark:text-light py-2 mx-8 flex group-hover:text-secondary"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-dark dark:text-light py-2 mx-8 flex group-hover:text-secondary"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#education"
+                    class="text-base text-dark dark:text-light py-2 mx-8 flex group-hover:text-secondary"
+                    >Education</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#experience"
+                    class="text-base text-dark dark:text-light py-2 mx-8 flex group-hover:text-secondary"
+                    >Experience</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#project"
+                    class="text-base text-dark dark:text-light py-2 mx-8 flex group-hover:text-secondary"
+                    >Project</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#client"
+                    class="text-base text-dark dark:text-light py-2 mx-8 flex group-hover:text-secondary"
+                    >Clients</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="text-base text-dark dark:text-light py-2 mx-8 flex group-hover:text-secondary"
+                    >Contact</a
+                  >
+                </li>
+                <li class="flex items-center lg:mt-0 pl-8 mt-3">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-dark dark:text-light"
+                      >light</span
+                    >
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-10 cursor-pointer items-center rounded-full bg-dark dark:bg-light p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-light dark:bg-dark transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-dark dark:text-light"
+                      >Dark</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </nav>
+            <!-- navigation -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header -->
+
+    <!-- hero section -->
+    <section id="home" class="pt-40 bg-light dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-bold text-primary lg:text-xl">
+              Hello everyone, I'm
+              <span
+                class="block text-dark dark:text-light text-3xl lg:text-5xl mt-2 mb-1 lg:mt-3"
+                >Muhammad Ihsan Ushaim</span
+              >
+            </h1>
+            <h2 class="text-secondary font-semibold lg:text-xl mb-5">
+              Student |
+              <span class="text-dark dark:text-light">Web Designer</span>
+            </h2>
+            <p class="text-base font-normal text-dark dark:text-light mb-8">
+              A student who is enthusiastic about technology and automotive, and
+              also a student at SMK Negeri 4 Kota Tangerang.
+            </p>
+            <a
+              href="#contact"
+              class="py-3 font-medium bg-dark px-6 text-light rounded-full hover:bg-secondary hover:text-dark hover:font-bold dark:bg-secondary dark:text-dark dark:hover:text-secondary dark:hover:bg-dark dark:hover:border dark:hover:border-secondary transition duration-200 ease-in-out"
+              >Contact Me</a
+            >
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2 lg:right-0">
+            <div class="relative">
+              <img
+                src="dist/img/profile-picture.png"
+                alt="placeholder"
+                class="max-w-full mx-auto z-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero section -->
+
+    <!-- about section -->
+    <section id="about" class="bg-light dark:bg-dark pt-36 lg:pt-44 pb-32">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-2/3">
+            <h4 class="text-xl font-bold text-primary lg:text-2xl mb-4">
+              About Me
+            </h4>
+            <h2
+              class="text-2xl font-semibold lg:text-4xl max-w-md text-dark dark:text-light"
+            >
+              As A Person
+            </h2>
+            <p class="font-medium text-base mt-2 mb-3 dark:text-secondary">
+              I'm a technology and automotive enthusiast who is also a student.
+              I'm passionate about learning new things and always looking for
+              new ways to challenge myself. I'm also a creative thinker and
+              enjoy coming up with new ideas, even though it not work out. I'm a
+              great team player and are always willing to help others. I'm also
+              a great communicator and able to clearly and concisely explain My
+              ideas.
+            </p>
+          </div>
+          <div class="w-full px-4 lg:w-1/3">
+            <h3
+              class="text-2xl font-semibold lg:text-3xl lg:pt-12 text-dark dark:text-light"
+            >
+              Let's Be Partner
+            </h3>
+            <p class="font-medium text-base mt-2 dark:text-secondary">
+              Partner up with me
+            </p>
+            <!-- icon -->
+            <div class="flex items-center mt-2 justify-center lg:justify-start">
+              <!-- instagram -->
+              <a
+                href="https://www.instagram.com/ihsan_ushaim"
+                target="_blank"
+                class="w-11 h-11 p-2 mr-3 rounded-full flex justify-center items-center border border-dark text-light bg-dark hover:border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-in-out dark:border-light dark:hover:border-secondary dark:bg-light dark:text-dark dark:hover:text-light dark:hover:bg-secondary"
+              >
+                <svg
+                  role="img"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+              <!-- github -->
+              <a
+                href="https://www.github.com/SannnsUshaim"
+                target="_blank"
+                class="w-11 h-11 p-[5px] mr-3 rounded-full flex justify-center items-center border border-dark text-light bg-dark hover:border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-in-out dark:border-light dark:hover:border-secondary dark:bg-light dark:text-dark dark:hover:text-light dark:hover:bg-secondary"
+              >
+                <svg
+                  role="img"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>GitHub</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
+              <!-- twitter -->
+              <a
+                href=""
+                target="_blank"
+                class="w-11 h-11 p-2 mr-3 rounded-full flex justify-center items-center border border-dark text-light bg-dark hover:border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-in-out dark:border-light dark:hover:border-secondary dark:bg-light dark:text-dark dark:hover:text-light dark:hover:bg-secondary"
+              >
+                <svg
+                  role="img"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>X</title>
+                  <path
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                  />
+                </svg>
+              </a>
+              <!-- linkedIn -->
+              <a
+                href=""
+                target="_blank"
+                class="w-11 h-11 p-2 mr-3 rounded-full flex justify-center items-center border border-dark text-light bg-dark hover:border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-in-out dark:border-light dark:hover:border-secondary dark:bg-light dark:text-dark dark:hover:text-light dark:hover:bg-secondary"
+              >
+                <svg
+                  role="img"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>LinkedIn</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section -->
+
+    <!-- education section -->
+    <section id="education" class="bg-secondary dark:bg-darker pt-36">
+      <div class="container">
+        <div class="w-full px-4 text-center">
+          <h2 class="font-bold text-3xl lg:text-4xl text-light mb-2">
+            Education
+          </h2>
+          <p class="font-medium text-dark text-base dark:text-secondary">
+            Where do I Learn Many Things?
+          </p>
+        </div>
+        <div
+          class="w-full px-4 mt-5 flex flex-wrap items-center justify-center xl:w-11/12 xl:mx-auto"
+        >
+          <div class="bg-light rounded-lg shadow-lg mb-10 p-1 m-2">
+            <img
+              src="dist/img/education/SDIT-Nurul-Hayat.jpg"
+              alt="sdit al istiqomah"
+              class="img rounded-lg bg-light"
+            />
+            <div class="py-6 px-4 max-w-[480px]">
+              <h4 class="font-semibold text-lg text-dark">2013 - 2016</h4>
+              <h2
+                class="font-bold text-xl lg:text-2xl text-secondary dark:text-dark my-2 cursor-pointer block hover:text-dark transition duration-200 dark:hover:text-secondary"
+              >
+                SDIT Nurul Hayat
+              </h2>
+              <a
+                href="https://maps.app.goo.gl/CKqgaH1wf63f8PUSA"
+                target="_blank"
+                class="text-dark hover:text-secondary font-medium transition duration-200 ease-in-out"
+                >Jl. Kediri, RT.005/RW.016, Uwung Jaya, Kec. Cibodas, Kota
+                Tangerang, Banten 15138</a
+              >
+            </div>
+          </div>
+          <div class="bg-light rounded-lg shadow-lg mb-10 p-1 m-2">
+            <img
+              src="dist/img/education/SDIT-Al-Istiqomah.jpg"
+              alt="sdit al istiqomah"
+              class="img w-full rounded-lg bg-light"
+            />
+            <div class="py-6 px-4 max-w-[480px]">
+              <h4 class="font-semibold text-lg text-dark">2016 - 2019</h4>
+              <a
+                href="https://istiqomah.sch.id"
+                target="_blank"
+                class="font-bold text-xl lg:text-2xl text-secondary dark:text-dark my-2 block hover:text-dark transition duration-200 dark:hover:text-secondary"
+              >
+                SDIT Al-Istiqomah II
+              </a>
+              <a
+                href="https://maps.app.goo.gl/6PY8khnKyA7dKCNA6"
+                target="_blank"
+                class="text-dark hover:text-secondary font-medium transition duration-200 ease-in-out"
+                >Jl. Sawo Raya, RT.004/RW.004, Cibodasari, Kec. Cibodas, Kota
+                Tangerang, Banten 15810</a
+              >
+            </div>
+          </div>
+          <div class="bg-light rounded-lg shadow-lg mb-10 p-1 m-2">
+            <img
+              src="dist/img/education/Al-Adzkar.png"
+              alt="Pesantren Al-Adzkar"
+              class="img rounded-lg shadow-lg"
+            />
+            <div class="py-6 px-4 max-w-[480px]">
+              <h4 class="font-semibold text-lg text-dark">2019 - 2022</h4>
+              <a
+                href="https://aladzkar.sch.id"
+                target="_blank"
+                class="font-bold text-xl lg:text-2xl text-secondary dark:text-dark my-2 block hover:text-dark transition duration-200 dark:hover:text-secondary"
+              >
+                MTsS Al-Adzkar (Pesantren Modern Al-Adzkar)
+              </a>
+              <a
+                href="https://maps.app.goo.gl/LZ1pKvr7e3tiFhqLA"
+                target="_blank"
+                class="text-dark hover:text-secondary font-medium transition duration-200 ease-in-out"
+                >Jl. Pinang Raya, RT.02/RW.014, Pamulang Tim., Kec. Pamulang,
+                Kota Tangerang Selatan, Banten</a
+              >
+            </div>
+          </div>
+          <div class="bg-light rounded-lg shadow-lg mb-10 p-1 m-2">
+            <img
+              src="dist/img/education/SMKN4.jpeg"
+              alt="SMK Negeri 4 Tangerang"
+              class="img rounded-lg shadow-lg"
+            />
+            <div class="py-6 px-4 max-w-[480px]">
+              <h4 class="font-semibold text-lg text-dark">2022 - 2025</h4>
+              <a
+                href="https://smkn4-tng.sch.id"
+                target="_blank"
+                class="font-bold text-xl lg:text-2xl text-secondary dark:text-dark my-2 block hover:text-dark transition duration-200 dark:hover:text-secondary"
+              >
+                SMK Negeri 4 Tangerang
+              </a>
+              <a
+                href="https://maps.app.goo.gl/96DqUyn52SWCE2aVA"
+                target="_blank"
+                class="text-dark hover:text-secondary font-medium transition duration-200 ease-in-out"
+                >Jl. Veteran No.1A, RT.005/RW.002, Babakan, Kec. Tangerang, Kota
+                Tangerang, Banten 15118</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- education section -->
+
+    <!-- experience section -->
+    <section id="experience" class="bg-secondary dark:bg-darker pt-36">
+      <div class="container">
+        <div class="w-full px-4 text-center">
+          <h3 class="text-light text-3xl font-bold mb-2 lg:text-4xl">
+            Experience
+          </h3>
+          <p class="text-dark text-base font-medium dark:text-secondary">
+            What Experiences I Have Been Through?
+          </p>
+        </div>
+        <div class="w-full flex flex-wrap mt-4 justify-center">
+          <div class="mb-10 p-3 lg:w-1/3 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img
+                src="dist/img/experience/sertifikat/serti-toeic.jpg"
+                alt="sertifikat toeic"
+                class="img-landscape-16-9"
+              />
+            </div>
+            <div class="w-full text-start">
+              <h3 class="text-xl lg:text-2xl font-bold text-light mt-2 mb-1">TOEIC Certificate</h3>
+              <p class="text-base text-dark font-medium dark:text-secondary">
+                TOEIC or Test of English of International Communication is an international standardized test of English language proficiency for non-native speakers. It is intentionally designed to measure the everyday English skills of people working in an international environment.
+              </p>
+            </div>
+          </div>
+          <div class="mb-10 p-3 lg:w-1/3 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img
+                src="dist/img/experience/sertifikat/serti-ukbi.jpg"
+                alt="sertifikat UKBI"
+              />
+            </div>
+            <div class="w-full text-start">
+              <h3 class="text-xl lg:text-2xl font-bold text-light mt-2 mb-1">UKBI Certificate</h3>
+              <p class="text-base text-dark font-medium dark:text-secondary">
+                UKBI or Uji Kemahiran Bahasa Indonesia is a test to measure a person's Indonesian language ability, both orally and in writing,
+          A test to measure a pers    </p>
+            </div>
+          </div>
+          <div class="mb-10 p-3 lg:w-1/3 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img
+                src="dist/img/experience/sertifikat/serti-skilvul-html.jpg"
+                alt="sertifikat html"
+              />
+            </div>
+            <div class="w-full text-start">
+              <h3 class="text-xl lg:text-2xl font-bold text-light mt-2 mb-1">Skilvul HTML Certificate</h3>
+              <p class="text-base text-dark font-medium dark:text-secondary">
+                Skilvul Certificate HTML when we completed some of their classes, although we must paid 25.000 rupiahs to unlocked this badge. You can learn too at <a href="https://skilvul.com" target="_blank" class="hover:font-semibold hover:text-light hover:decoration-solid hover:underline">Skillvul.com</a> and take their classes.
+              </p>
+            </div>
+          </div>
+          <div class="mb-10 p-3 lg:w-1/3 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img
+                src="dist/img/experience/kegiatan/jalan-sehat-se-banten.jpg"
+                alt="Jalan sehat"
+              />
+            </div>
+            <div class="w-full text-start">
+              <h3 class="text-xl lg:text-2xl font-bold text-light mt-2 mb-1">Jalan Sehat Banten</h3>
+              <p class="text-base text-dark font-medium dark:text-secondary">
+                In order to celebrate Banten's 23rd anniversary. We, OSIS, were invited to take part in a healthy walking activity representing SMK Negeri 4 Tangerang, accompanied by several teachers.
+              </p>
+            </div>
+          </div>
+          <div class="mb-10 p-3 lg:w-1/3 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img
+                src="dist/img/experience/kegiatan/literasi.jpg"
+                alt="kegiatan literasi"
+                class="img-landscape-4-3"
+              />
+            </div>
+            <div class="w-full text-start">
+              <h3 class="text-xl lg:text-2xl font-bold text-light mt-2 mb-1">Literasi Kuat</h3>
+              <p class="text-base text-dark font-medium dark:text-secondary">
+                seminar activity "Literasi Kuat" presented by Dr. Yeremia Mendrofa, chairman of commission V of the Banten DPRD.
+              </p>
+            </div>
+          </div>
+          <div class="mb-10 p-3 lg:w-1/3 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img
+                src="dist/img/experience/kegiatan/mpls.jpg"
+                alt="mpls"
+              />
+            </div>
+            <div class="w-full text-start">
+              <h3 class="text-xl lg:text-2xl font-bold text-light mt-2 mb-1">MPLS Mentor</h3>
+              <p class="text-base text-dark font-medium dark:text-secondary">
+                MPLS or Masa Pengenalan Lingkungan Sekolah is an activity to introduce new students to what the school environment is like, what the activities are and the teachers. I became part of the mentor in the mpls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- experience section -->
+
+    <!-- project section -->
+    <section id="project" class="bg-secondary dark:bg-darker pt-36 pb-24">
+      <div class="container">
+        <div class="w-full px-4 text-center">
+          <h2 class="text-3xl lg:text-4xl font-bold text-light mb-2">
+            Recent Project
+          </h2>
+          <h4 class="text-dark dark:text-secondary font-medium text-base">
+            What Project Have I Made?
+          </h4>
+          <div
+            class="w-full px-4 flex flex-wrap justify-center xl:w-11/12 xl:mx-auto mt-4"
+          >
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/web-kohee-coffee.png"
+                  alt="kohee coffee web"
+                  width="w-full"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  Kohee Coffee Web
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  Just a testing project and to learn HTML, CSS, and JavaScript.
+                  It is not a big project.
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/web-portfolio-1.png"
+                  alt="first porfolio"
+                  width="w-full"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  First porfolio Web
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  My first portfolio web, just to learn the bootstrap framework
+                  and also this is my first time learn how to make a web.
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/web-portfolio-2.png"
+                  alt="second portfolio"
+                  width="w-full"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  Second Portfolio Web
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  Second portfolio web for my class project, but it's still not
+                  that good. So, I decided to remake it. You can see it here, at
+                  <a
+                    href="https://sannnsushaim.github.io/Portfolio/"
+                    class="hover:text-light duration-200 transition ease-in-out"
+                    >sannnsushaim.github.io/portfolio</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/web-portfolio-3.png"
+                  alt="third porfolio"
+                  width="w-full"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  Third Portfolio Web
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  Third portfolio web, it's just to learn the tailwindcss
+                  framework I can't say that's a project, but, why not.
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/web-kredit-rumah.png"
+                  alt="home loan web"
+                  width="w-full"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  Kredit Rumah Web
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  A school assignment where we are told to calculate a home
+                  loan.
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/web-rpl.png"
+                  alt="RPL 1 web"
+                  width="w-full"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  RPL 1 Web
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  A school assignment where we told to make the RPL 1 Web.
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/project-design-1.png"
+                  alt="Independence Poster"
+                  width="w-full"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  Independence Poster
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  A school assignment where we told to make a poster about 78
+                  Years Indonesia Independence Day
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/daun-kelor-brosur.jpg"
+                  alt="daun kelor brochure"
+                  width="w-full"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  Daun Kelor Brochure
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  A school project where we told to make a daun kelor brochure
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/animasi-1.png"
+                  alt="animation project 1"
+                  width="w-full"
+                  id="image-animation-1"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  Animation Project
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  A school project where we told to make an animation about Eid
+                  Fitr
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 p-2 md:w-1/2">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img
+                  src="dist/img/project/animasi-2.png"
+                  alt="animation project 2"
+                  width="w-full"
+                  id="image-animation-2"
+                />
+              </div>
+              <div class="w-full text-start">
+                <h3 class="font-bold text-2xl lg:text-3xl text-light my-2">
+                  Animation Project 2
+                </h3>
+                <p class="text-base font-medium text-dark dark:text-secondary">
+                  A school project where we told to make an animation about
+                  anything, and I made an animation about a speed ball
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- project section -->
+
+    <!-- client section -->
+    <section id="client" class="bg-lighter dark:bg-darken py-36">
+      <div class="container">
+        <div class="w-full px-2">
+          <div class="mx-auto text-center mb-16">
+            <h4 class="font-semibold text-xl text-dark dark:text-light">
+              Clients
+            </h4>
+            <h2
+              class="text-primary font-bold text-4xl lg:text-5xl mt-2 mb-1 dark:text-secondary"
+            >
+              Partnership With
+            </h2>
+            <p class="font-medium text-dark dark:text-light text-base">
+              Who Are My Clients?
+            </p>
+          </div>
+        </div>
+        <div class="w-full px-4">
+          <div class="flex flex-wrap items-center justify-center">
+            <a
+              href=""
+              class="max-w-[140px] mx-4 py-4 lg:grayscale lg:opacity-60 transitio duration-500 lg:hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-6"
+              ><img src="dist/img/clients/coming-soon.png" alt="client"
+            /></a>
+            <a
+              href=""
+              class="max-w-[140px] mx-4 py-4 lg:grayscale lg:opacity-60 transitio duration-500 lg:hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-6"
+              ><img src="dist/img/clients/coming-soon.png" alt="client"
+            /></a>
+            <a
+              href=""
+              class="max-w-[140px] mx-4 py-4 lg:grayscale lg:opacity-60 transitio duration-500 lg:hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-6"
+              ><img src="dist/img/clients/coming-soon.png" alt="client"
+            /></a>
+            <a
+              href=""
+              class="max-w-[140px] mx-4 py-4 lg:grayscale lg:opacity-60 transitio duration-500 lg:hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-6"
+              ><img src="dist/img/clients/coming-soon.png" alt="client"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- client section -->
+
+    <!-- contact section -->
+    <section id="contact" class="pt-36 pb-32 bg-light dark:bg-dark">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-dark mb-2">Contact</h4>
+            <h2
+              class="font-bold text-primary text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-light"
+            >
+              Contact Me
+            </h2>
+            <p
+              class="font-medium text-md text-dark dark:text-secondary md:text-lg"
+            >
+              Fell Free to Contact Me
+            </p>
+          </div>
+          <form>
+            <div class="w-full lg:w-2/3 lg:mx-auto">
+              <div class="w-full px-4 mb-8">
+                <label
+                  for="name"
+                  class="text-base text-primary dark:text-light font-bold"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                />
+              </div>
+              <div class="w-full px-4 mb-8">
+                <label
+                  for="email"
+                  class="text-base text-primary dark:text-light font-bold"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                />
+              </div>
+              <div class="w-full px-4 mb-8">
+                <label
+                  for="message"
+                  class="text-base text-primary dark:text-light font-bold"
+                  >Message</label
+                >
+                <textarea
+                  type="text"
+                  id="email"
+                  class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"
+                ></textarea>
+              </div>
+              <div class="w-full px-4">
+                <button
+                  class="text-base font-semibold text-light bg-dark py-3 px-8 rounded-full w-full hover:bg-secondary hover:text-dark hover:font-bold hover:shadow-lg transition duration-200 active:bg-dark active:text-light dark:text-dark dark:bg-secondary dark:border dark:border-secondary dark:hover:bg-dark dark:hover:text-secondary dark:hover:shadow-secondary dark:hover:shadow-md"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- contact section -->
+
+    <!-- footer -->
+    <footer class="bg-darker pt-24 pb-12">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12 text-light lg:w-2/3">
+            <h2 class="font-bold text-3xl lg:text-4xl mb-3">Ihsan Ushaim</h2>
+            <h3 class="font-semibold text-xl lg:text-2xl mb-1">Contact Me</h3>
+            <p class="font-medium text-base mb-1">ushaimihsan@gmail.com</p>
+            <p class="font-medium text-base">+62851-5643-5830</p>
+          </div>
+          <div class="w-full px-4 mb-12 text-light lg:w-1/3">
+            <h2 class="font-bold text-3xl lg:text-4xl mb-3">Links</h2>
+            <ul>
+              <li class="mb-3">
+                <a
+                  href="#home"
+                  class="font-normal text-lg hover:text-secondary transition duration-200 ease-in-out dark:hover:text-secondary"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  href="#about"
+                  class="font-normal text-lg hover:text-secondary transition duration-200 ease-in-out dark:hover:text-secondary"
+                  >About</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  href="#education"
+                  class="font-normal text-lg hover:text-secondary transition duration-200 ease-in-out dark:hover:text-secondary"
+                  >Education</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  href="#experience"
+                  class="font-normal text-lg hover:text-secondary transition duration-200 ease-in-out dark:hover:text-secondary"
+                  >Experience</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  href="#project"
+                  class="font-normal text-lg hover:text-secondary transition duration-200 ease-in-out dark:hover:text-secondary"
+                  >Project</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  href="#client"
+                  class="font-normal text-lg hover:text-secondary transition duration-200 ease-in-out dark:hover:text-secondary"
+                  >Clients</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  href="#contact"
+                  class="font-normal text-lg hover:text-secondary transition duration-200 ease-in-out dark:hover:text-secondary"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full px-4 pt-10 border-t-2 border-light">
+          <div class="flex items-center justify-center mb-5">
+            <a
+              href="https://www.instagram.com/ihsan_ushaim"
+              target="_blank"
+              class="w-11 h-11 p-2 mr-3 rounded-full flex justify-center items-center border border-light text-light bg-dark hover:border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-in-out"
+            >
+              <svg
+                role="img"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                />
+              </svg>
+            </a>
+            <!-- github -->
+            <a
+              href="https://www.github.com/SannnsUshaim"
+              target="_blank"
+              class="w-11 h-11 p-[5px] mr-3 rounded-full flex justify-center items-center border border-light text-light bg-dark hover:border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-in-out"
+            >
+              <svg
+                role="img"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>GitHub</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+            <!-- twitter -->
+            <a
+              href=""
+              target="_blank"
+              class="w-11 h-11 p-2 mr-3 rounded-full flex justify-center items-center border border-light text-light bg-dark hover:border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-in-out"
+            >
+              <svg
+                role="img"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>X</title>
+                <path
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                />
+              </svg>
+            </a>
+            <!-- linkedIn -->
+            <a
+              href=""
+              target="_blank"
+              class="w-11 h-11 p-2 mr-3 rounded-full flex justify-center items-center border border-light text-light bg-dark hover:border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-in-out"
+            >
+              <svg
+                role="img"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>LinkedIn</title>
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="w-full px-4 mt-2 text-center lg:text-left">
+            <p class="text-light font-bold">
+              &copy; Copyright Ihsan Ushaim | 2023
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
