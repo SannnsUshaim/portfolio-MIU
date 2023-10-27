@@ -1312,9 +1312,9 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.focus\:border-primary:focus {
+.focus\:border-secondary:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(56 118 191 / var(--tw-border-opacity));
+  border-color: rgb(225 170 116 / var(--tw-border-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -1328,9 +1328,9 @@ body {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.focus\:ring-primary:focus {
+.focus\:ring-secondary:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(56 118 191 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(225 170 116 / var(--tw-ring-opacity));
 }
 
 .active\:bg-dark:active {

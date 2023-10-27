@@ -54,3 +54,17 @@ if (
 } else {
   darkToggle.checked = false;
 }
+
+// play video
+// Wait for the page to load
+document.addEventListener('DOMContentLoaded', function() {
+  let video = document.getElementById('video');
+  video.addEventListener('click', function() {
+      if (video.paused) {
+          video.play();
+      }
+      else {
+          video.pause();
+      }
+  });
+});
